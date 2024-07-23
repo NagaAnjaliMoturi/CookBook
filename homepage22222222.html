@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="homepage.css">
+    <style>
+        /* Add some basic CSS styles for the dropdown */
+       /* Add some basic CSS styles for the dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 150px; /* Adjust the width as needed */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Style the dropdown links */
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">CooKing</h2>
+            </div>
+
+            <div class="menu"> <!-- Corrected the class attribute here -->
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">CATEGORIES</a>
+                        <div class="dropdown-content">
+                            <a href="#">Soups</a>
+                            <a href="#">Starters</a>
+                            <a href="Biryanipage.html">Biryanis</a>
+                            <a href="#">Curries</a>
+                            <a href="#">Desserts</a>
+                            <a href="#">Jucies</a>
+
+                        </div>
+                    </li>
+                    <li><a href="recipesubmission.html" target="_blank">YOUR recipes!!</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <h1> COOKING <br><span>ADVENTURES</span></h1>
+            <p class="par">A recipe has no soul. You as the cook must bring soul to the recipe.</p>
+            <button class="cn"><a href="home.html">LETS GO</a></button>
+
+            <div class="form">
+                <h2>Login Here</h2>
+                <input type="email" name="email" id="email" value="divyteje@gmail.com">
+                <input type="password" name="password" id="password" value="123456">
+                <button class="btnn" id="login-button">Login</button>
+                <p class="link">Don't have an account<br>
+                <a href="#">Sign up </a> here</p>
+                <p class="liw">Log in with</p>
+                <div class="icons">
+                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+    <script>
+        document.getElementById("login-button").addEventListener("click", function() {
+            // Retrieve the entered email and password
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            // Check for the specific email and password combination
+            if (email === "divyteje@gmail.com" && password === "123456") {
+                alert("Login successful for user 1!");
+                window.location.href = "user1.html"; 
+            } else if (email === "anju@gmail.com" && password === "67890") {
+                alert("Login successful for user 2!");
+                window.location.href = "user2.html"; 
+            } else {
+                alert("Invalid email or password. Please try again.");
+            }
+        });
+    </script>
+</body>
+</html>
